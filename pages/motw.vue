@@ -39,7 +39,7 @@
 
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 import Card from '~/components/Card.vue'
 
 export default {
@@ -51,24 +51,24 @@ export default {
     return {
       loading: true,
       moviesAPI: null,
-      errored: false,
+      errored: false
       // array for placeholder content
       // placeholderContent: [
       //   "<placeholder for API data>",
       //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
       // ]
     }
-  },
-  mounted () {
-  axios
-    .get('http://www.omdbapi.com/?i=tt3896198&apikey=d36f6554')
-    .then(response => (this.moviesAPI = response.data))
-    .catch(error => {
-      console.log(error)
-      this.errored = true
-    })
-    .finally(() => this.loading = false)
   }
+  // mounted () {
+  // axios
+  //   .get('http://www.omdbapi.com/?i=tt3896198&apikey=d36f6554')
+  //   .then(response => (this.moviesAPI = response.data))
+  //   .catch(error => {
+  //     console.log(error)
+  //     this.errored = true
+  //   })
+  //   .finally(() => this.loading = false)
+  // }
 }
 
 
@@ -81,9 +81,6 @@ export default {
 //   document.querySelector('pre').innerHTML = JSON.stringify(data);
 // })
 // .catch(error => console.error(error));
-
-
-
 
 </script>
 
